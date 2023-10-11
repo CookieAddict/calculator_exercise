@@ -17,6 +17,11 @@ while (!prompt || prompt.command !== 'exit') {
     ]);
 
     let command = prompt.command;
+
+    if (prompt.command === 'exit') {
+        break;
+    }
+
     if (!validateInput(command)) {
         console.log('Invalid command, please retry. To quit, type "exit"');
         continue;
